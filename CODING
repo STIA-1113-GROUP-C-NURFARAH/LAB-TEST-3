@@ -1,0 +1,41 @@
+package labTest3;
+import java.util.Scanner;
+
+public class WordCount {
+
+	public static void main(String[] args) {
+		/*A common exercise is counting how many times a word occur in a set. 
+		 * For every unique word in the set, you should print the number of occurrences:*/
+		
+		Scanner sc=new Scanner(System.in);
+        System.out.println("Enter words: ");
+        String str[]=sc.nextLine().split(" ");
+        
+        int wordlength=str.length;
+        int repeattt=0;
+        for(int i=0;i<wordlength;i++)
+        {
+            for(int j=(i+1);j<wordlength;j++)
+            {
+                if((str[j]).equals(str[i]))
+                {
+                    System.out.println("Repeated words:" + str[j]);
+                    repeattt++;
+                    int wordcount=1;
+                    for (int a=0; a<wordlength-1;a++) {
+                    	if(str.length==' ' && str.length != ' ') {
+                    		wordcount++;
+                    		
+                    	}
+                    	System.out.println("Word count:" + wordcount);
+                    }
+                    break;
+                }
+            }
+        }
+        if(repeattt==0)
+        {
+            System.out.println("No repetition of words");
+        }
+    }
+}
